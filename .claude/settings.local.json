@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Invoke-RestMethod -Method POST -Uri \"http://localhost:3000/api/seed\" -ContentType \"application/json\" 2>&1)",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:3000/api/products\")",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:3000/api/products\" | Select-Object -First 3 | ForEach-Object { $_.name })"
+    ]
+  }
+}
